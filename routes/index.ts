@@ -12,8 +12,8 @@ class IndexRoute {
 		res.render("index/index", opcoes);
 	}
 
-	public async teste(req: app.Request, res: app.Response) {
-		res.render("index/teste");
+	public async servicos(req: app.Request, res: app.Response) {
+		res.render("index/servicos");
 	}
 
 	public async produtos(req: app.Request, res: app.Response) {
@@ -35,7 +35,7 @@ class IndexRoute {
 			valor: 100
 		};
 
-		let produtosVindosDoBanco = [ produtoA, produtoB, produtoC ];
+		let produtosVindosDoBanco = [produtoA, produtoB, produtoC];
 
 		let opcoes = {
 			titulo: "Listagem de Produtos",

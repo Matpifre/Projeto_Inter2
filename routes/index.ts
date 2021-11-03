@@ -16,8 +16,18 @@ class IndexRoute {
 		res.render("index/servicos");
 	}
 
-	public async produtos(req: app.Request, res: app.Response) {
-		let produtoA = {
+	public async login(req: app.Request, res: app.Response) {
+		res.render("index/login");
+	}
+
+	public async funcionarios(req: app.Request, res: app.Response) {
+
+		let fucionarios = {
+			id: 1,
+			nome: "Null",
+			valor: 0
+		}
+		/* let produtoA = {
 			id: 1,
 			nome: "Produto A",
 			valor: 25
@@ -33,16 +43,17 @@ class IndexRoute {
 			id: 3,
 			nome: "Produto C",
 			valor: 100
-		};
+		}; */
 
-		let produtosVindosDoBanco = [produtoA, produtoB, produtoC];
+		/* produtoA, produtoB, produtoC, */
+		let produtosVindosDoBanco = [fucionarios];
 
 		let opcoes = {
-			titulo: "Listagem de Produtos",
+			titulo: "Listagem de funcionarios",
 			produtos: produtosVindosDoBanco
 		};
 
-		res.render("index/produtos", opcoes);
+		res.render("index/funcionarios", opcoes);
 	}
 }
 

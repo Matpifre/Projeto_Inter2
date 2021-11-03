@@ -1,1 +1,20 @@
 /* Vazio até o momento */
+
+.logo {
+    max-width: 100%;
+    background-color: rgb(88, 87, 87);
+    background-size: cover;
+    background-position: center center;
+    /* margin-left: 100px; */
+}
+
+.login {
+    margin-left: 880px;
+}
+
+
+/* @media screen and (max-width: 600px) {
+    .login {
+        margin-left: 0px;
+    }
+} */

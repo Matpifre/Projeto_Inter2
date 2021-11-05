@@ -27,6 +27,7 @@ class IndexRoute {
 			nome: "Null",
 			valor: 0
 		}
+
 		/* let produtoA = {
 			id: 1,
 			nome: "Produto A",

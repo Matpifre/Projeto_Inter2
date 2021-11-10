@@ -1,55 +1,170 @@
+.body {
+    margin: 0%;
+}
+
 .logo {
     max-width: 100%;
-    background-color: rgb(175, 225, 238);
+    background-image: url("../public/Img/ressaclean.jpg");
     background-size: cover;
     background-position: center center;
-    padding-left: 28%;
-    
-    /* margin-left: 100px; */
 }
 
-.login {
-    margin-left: 880px;
+
+/* .login {
+    margin-left: 750px;
+} */
+
+.titulo-sv {
+    text-align: center;
+    color: #36E3E3;
+    margin: 40px auto 20px auto;
+    text-shadow: 1px 1px #000000;
 }
 
-.titulo-sv{
+.titulo2-sv {
     text-align: center;
-    color:#36E3E3;
-}
-.titulo2-sv{
-    text-align: center;
-    color:#36E3E3;
+    color: #36E3E3;
     margin-top: 80px;
     margin-bottom: 5%;
+    text-shadow: 1px 1px #000000;
 }
-.subtitulo-sv{
+
+.subtitulo-sv {
     text-align: center;
     margin-bottom: 40px;
 }
-.container-sv{
-    margin-top: 80px;
+
+.servico {
+    margin: 0%;
+}
+
+.container-sv {
+    margin: 100px auto 100px auto;
     text-align: center;
 }
 
-.quadradinho{
+.btn-servico {
+    background: #b8f4f6;
+    color: rgb(8, 8, 8);
+    display: inline-block;
+    font-size: 17px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'IBM Plex Sans Arabic', Sans-Serif;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    transition: .6s linear;
+    text-decoration: none;
+    box-shadow: 0px 0px 10px 0.2px rgb(170, 170, 170);
+}
+
+.btn-servico:hover {
+    background: #fff;
+    color: #000000;
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: 0px 0px 10px 0.3px rgb(202, 236, 245);
+}
+
+.quadradinho {
     margin-bottom: 20%;
     background-color: rgb(202, 236, 245);
     text-align: center;
+    border-radius: 5px;
 }
 
-.icone{
+.quadradinho:hover {
+    border: 2px solid #000000;
+    background-color: rgb(202, 236, 245);
+    color: #000000;
+    box-shadow: 2px 2px rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 2px 5px 2px 5px;
+    transition: .2s ease-in-out;
+    display: inherit;
+}
+
+.icone {
+    max-width: 100%;
     transform: scale(0.2, 0.2);
-    height: 170px;
-    margin-right: 22%;
+    height: 150px;
+    margin: 0px 50px 20px auto;
 }
 
-.subTituloIcone{
+.subTituloIcone {
     padding-bottom: 25%;
 }
 
+.fundo1 {
+    background-image: url(https://res.cloudinary.com/sagacity/image/upload/c_crop,h_3333,w_5000,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_1080/086A6699_bdmxdi.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #FFF71F;
+    text-align: center;
+    padding: 40px 30px;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+    font-family: 'PT Sans Narrow', sans-serif;
+}
 
-/* @media screen and (max-width: 600px) {
-    .login {
-        margin-left: 0px;
-    }
-} */
+.titulo1 {
+    max-width: 600px;
+    margin: 0px auto 10px auto;
+    text-align: center;
+    font-size: 35px;
+}
+
+.sub1 {
+    max-width: 400px;
+    margin: 20px auto 40px auto;
+    text-align: center;
+}
+
+.imagemLogo {
+    max-width: 100%;
+}
+
+.fundoOpiniao {
+    background-color: #EBEBEB;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 10px;
+    text-align: center;
+}
+
+.coluna {
+    padding: 15px;
+}
+
+.divisor {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 15%, rgba(9, 9, 121, 1) 44%, rgba(54, 227, 227, 1) 67%, rgba(251, 251, 251, 1) 87%);
+    padding: 18px;
+}
+
+.opinioes {
+    text-align: center;
+    font-family: 'IBM Plex Sans Arabic', Sans-Serif;
+}
+
+.limitador1 {
+    padding: 5px 15px;
+}
+
+.divisor2 {
+    max-width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.fundoFundadores {
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 10px;
+    text-align: center;
+    color: #EBEBEB;
+    font-family: 'IBM Plex Sans Arabic', Sans-Serif;
+}
+
+.ftFundadores {
+    padding: 20px;
+    width: 280px;
+}

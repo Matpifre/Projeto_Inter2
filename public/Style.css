@@ -168,3 +168,42 @@
     padding: 20px;
     width: 280px;
 }
+
+.copy {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 17px;
+    padding: 10px 0px;
+    color: #fff;
+    background-color: rgb(37, 37, 37);
+    text-align: center;
+}
+
+.background-contacts {
+    color: #fff;
+    background-color: rgb(37, 37, 37);
+    padding: 20px 0px 0px 0px;
+}
+
+.contact {
+    padding: 5px 0px 5px 0px;
+    margin: 0px 0px 0px 40px;
+}
+
+.contact li {
+    list-style: none;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 3px 0px;
+}
+
+.contact i {
+    color: rgb(218, 214, 214);
+}
+
+.contact span {
+    color: rgb(226, 241, 6);
+    text-shadow: 1px 1px rgb(0, 0, 0);
+}
+
+.contact .titulo-ressaclean {
+    text-shadow: 1px 1px rgb(17, 17, 17);
+}

@@ -207,3 +207,13 @@
 .contact .titulo-ressaclean {
     text-shadow: 1px 1px rgb(17, 17, 17);
 }
+.titulo_funcionarios{
+    text-align: center;
+    color: #36E3E3;
+    text-shadow: 1px 1px #000000;
+}
+
+.subtitulo_funcionarios{
+    text-align: center;
+    color: rgb(226, 241, 6);
+}

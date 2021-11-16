@@ -14,11 +14,22 @@
     margin-left: 750px;
 } */
 
+.img-servico {
+    max-width: 100%;
+    background-image: url("../public/Img/Servicos_linpeza.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 180px 20px;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
 .titulo-sv {
     text-align: center;
     color: #36E3E3;
     margin: 40px auto 20px auto;
-    text-shadow: 1px 1px #000000;
+    text-shadow: 1px 1px #535353;
 }
 
 .titulo2-sv {
@@ -32,6 +43,9 @@
 .subtitulo-sv {
     text-align: center;
     margin-bottom: 40px;
+    color: #ffffff;
+    opacity: 0.8;
+    text-shadow: 1px 1px #000000;
 }
 
 .servico {
@@ -64,6 +78,17 @@
     box-shadow: 0px 0px 10px 0.3px rgb(202, 236, 245);
 }
 
+.img-funcionarios {
+    max-width: 100%;
+    background-image: url("../public/Img/equipe-de-limpeza.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 240px 20px;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
 .quadradinho {
     margin-bottom: 20%;
     background-color: rgb(202, 236, 245);
@@ -72,6 +97,7 @@
 }
 
 .quadradinho:hover {
+    cursor: pointer;
     border: 2px solid #000000;
     background-color: rgb(202, 236, 245);
     color: #000000;
@@ -207,13 +233,18 @@
 .contact .titulo-ressaclean {
     text-shadow: 1px 1px rgb(17, 17, 17);
 }
-.titulo_funcionarios{
+
+.titulo_funcionarios {
     text-align: center;
-    color: #36E3E3;
+    color: #76f5f5;
     text-shadow: 1px 1px #000000;
 }
 
-.subtitulo_funcionarios{
+.subtitulo_funcionarios {
     text-align: center;
-    color: rgb(226, 241, 6);
+    margin: 10px auto 15px auto;
+    font-size: 18pt;
+    color: #76f5f5;
+    text-shadow: 1px 1px #706f6f;
+    font-family: 'PT Sans Narrow', sans-serif;
 }

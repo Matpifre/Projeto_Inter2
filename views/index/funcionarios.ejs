@@ -1,7 +1,63 @@
-<h1>Pagina de funcionários !!</h1>
+<h1 class="titulo_funcionarios ">
+    Conheça ou seja um dos nossos funcionarios
+</h1>
 
-<p>Listagem de funcionarios (
-    <%= produtos.length %> funcionario disponível)</p>
+<p class="subtitulo_funcionarios">Listagem de funcionarios (
+    <%= produtos.length %> funcionario disponível)
+</p>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="quadradinho">
+                <p class="icone">
+                    <img src="/public/img/faxineirasolo.png">
+                </p>
+                <h4 class="tituloIcone">
+                    Seja você um funcionario solo
+                </h4>
+                <p class="subTituloIcone">
+                    Aqui você se cadastra para ser um funcionario 
+                    solo e é designado a equipes aleatorias quando ter um trabalho
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="quadradinho">
+                <p class="icone">
+                    <img src="/public/img/equipe-removebg-preview.png">
+                </p>
+                <h4 class="tiuloIcone">
+                    Cadastre sua equipe!
+                </h4>
+                <p class="subTituloIcone">
+                    Cadastre aqui sua equipe para trabalhar com o Ressaclean 
+                    e tenha os melhores e mais eficientes trabalhos  
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <% for (let contador = 0; contador < produtos.length; contador++) { %>
 

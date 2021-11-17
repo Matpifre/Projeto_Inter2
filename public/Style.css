@@ -248,3 +248,26 @@
     text-shadow: 1px 1px #706f6f;
     font-family: 'PT Sans Narrow', sans-serif;
 }
+
+.introservico
+{
+    text-align: center;
+    color: #FFF71F;
+    text-shadow: 1px 1px #706f6f;
+    font-family: 'PT Sans Narrow', sans-serif;
+    padding-bottom: 3%;
+    padding-top: 3%;
+}
+
+.introfunc{
+    text-align: center;
+    color: #FFF71F;
+    text-shadow: 1px 1px #706f6f;
+    font-family: 'PT Sans Narrow', sans-serif;
+    padding-top: 3%;
+}
+
+
+
+
+

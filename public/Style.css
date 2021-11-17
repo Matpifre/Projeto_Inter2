@@ -190,6 +190,17 @@
     font-family: 'IBM Plex Sans Arabic', Sans-Serif;
 }
 
+.titulo-fundadores {
+    color: #EBEBEB;
+}
+
+.titulo-fundadores span {
+    font-family: 'Marck Script', cursive;
+    background: -webkit-linear-gradient(#4EEEFF, #100);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .ftFundadores {
     padding: 20px;
     width: 280px;

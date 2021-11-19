@@ -200,6 +200,7 @@
     font-family: 'Marck Script', cursive;
     background: -webkit-linear-gradient(#4EEEFF, #100);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -269,7 +270,7 @@
     text-shadow: 1px 1px #706f6f;
     font-family: 'PT Sans Narrow', sans-serif;
     padding-bottom: 3%;
-    padding-top: 3%;
+    padding-top: 5%;
 }
 
 .introfunc{
@@ -280,7 +281,16 @@
     padding-top: 3%;
 }
 
+.fundo-serv{
+    background-color: #EBEBEB;
+}
 
+.icone-eq {
+    max-width: 100%;
+    transform: scale(0.2, 0.2);
+    height: 150px;
+    margin: 0px 0px 20px auto;
+}
 
 
 

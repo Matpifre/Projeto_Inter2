@@ -19,14 +19,16 @@
 
 <h1 class="introfunc">
     Faça agora sua reserva ou pedido
+    <p><img src="/public/Img/iconeLinha.png" style="width: 40px; height: 40px" /></p>
 </h1>
+
 
 <div class="caixinhas-pedido">
     <div class="container-sv">
         <div class="row servico">
                 <div class="col-sm-3">
                 <h3 class="titulos-caixinhas">Nome completo</h3>
-                <label for="Nome">Nome completo:</label>
+                <label for="Nome">Nome:</label>
                 <input type="text" id="Nome" name="Nome">
                 </div>
 
@@ -42,8 +44,8 @@
                 <input type="text" id="endereco" name="endereco">
                 </div>
                 <div class="col-sm-3">
-                <h3 class="titulos-caixinhas">Complemento Endereço</h3>
-                <label for="complemento">Complemento:</label>
+                <h3 class="titulos-caixinhas">Complemento </h3>
+                <label for="complemento">Ex(AP)</label>
                 <input type="text" id="complemento" name="complemento">
                 </div>
         </div>            
@@ -54,13 +56,13 @@
                 
                 <div class="col-sm-3">
                 <h3 class="titulos-caixinhas">Garafas retornaveis</h3>
-                <label for="garafas">Numero de garafas:</label>
+                <label for="garafas">N°de garafas:</label>
                 <input type="number" id="garafas" name="garafas">
                 </div>
                 
                 <div class="col-sm-3">
                 <h3 class="titulos-caixinhas"> Escolha a data</h3>
-                <label for="DataLImp">Data limpeza:</label>
+                <label for="DataLImp">Data da limpeza:</label>
                 <input type="date" id="DataLImp" name="DataLImp">
                 </div>   
                 
@@ -73,15 +75,17 @@
 
                 <div class="col-sm-3">
                 <h3 class="titulos-caixinhas">Escolha de plano</h3>
-                <label for="planos">Escolha entre nossos 3 planos:</label>
+                <label for="planos">Escolha entre 3 opções:</label>
                 <select name="planos" id="planos">
                 <option value="basico">Basico(HP)</option>
                 <option value="festao">Festão</option>
                 <option value="megaEvento">Mega evento</option>
+                </select>
                 </div>
         </div>
-    </div>    
-</div>    
+    </div>
+    <button type="button">Confirmar reserva</button>     
+</div> 
 
 <div class="background-contacts">
     <div class="container">

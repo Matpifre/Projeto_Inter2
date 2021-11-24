@@ -305,10 +305,12 @@
     font-family: 'PT Sans Narrow', sans-serif;
 }
 .caixinhas-pedido{
-    margin-top: 5%;
-    margin-bottom: 10%;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    margin-top: 2%;
     text-align: center;
-    background-color: #f1eeee;
+    background-image:linear-gradient(  #EBEBEB,#fcf397);
+    
 }
 
 

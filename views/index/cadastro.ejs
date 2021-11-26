@@ -28,14 +28,14 @@
         <div class="row servico">
                 <div class="col-sm-3">
                 <h3 class="titulos-caixinhas">Nome completo</h3>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome">
+                <label for="Nome">Nome:</label>
+                <input type="text" id="Nome" name="Nome">
                 </div>
 
                 <div class="col-sm-3">
                 <h3 class="titulos-caixinhas">Telefone de contato</h3>
-                <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">>
+                <label for="Telefone">Telefone:</label>
+                <input type="tel" id="Telefone" name="Telefone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">>
                 </div>
 
                 <div class="col-sm-3">
@@ -55,124 +55,37 @@
         <div class="row servico">
                 
                 <div class="col-sm-3">
-                <h3 class="titulos-caixinhas">Garrafas retornáveis</h3>
-                <label for="garrafas">N°de garrafas:</label>
-                <input type="number" id="garrafas" name="garrafas">
+                <h3 class="titulos-caixinhas">Garafas retornaveis</h3>
+                <label for="garafas">N°de garafas:</label>
+                <input type="number" id="garafas" name="garafas">
                 </div>
                 
                 <div class="col-sm-3">
                 <h3 class="titulos-caixinhas"> Escolha a data</h3>
-                <label for="data">Data da limpeza:</label>
-                <input type="date" id="data" name="data">
+                <label for="DataLImp">Data da limpeza:</label>
+                <input type="date" id="DataLImp" name="DataLImp">
                 </div>   
                 
                 <div class="col-sm-3">
                 <h3 class="titulos-caixinhas"> Escolha o horário</h3>
-                <label for="hora">Horário limpeza:</label>
-                <input type="time" id="hora" name="hora"
+                <label for="appt">Horário linpeza:</label>
+                <input type="time" id="appt" name="appt"
                 min="09:00" max="18:00" required>
                 </div>
 
                 <div class="col-sm-3">
                 <h3 class="titulos-caixinhas">Escolha de plano</h3>
-                <label for="plano">Escolha entre 3 opções:</label>
-                <select name="plano" id="plano">
-                <option value="1">Basico(HP)</option>
-                <option value="2">Festão</option>
-                <option value="3">Mega evento</option>
+                <label for="planos">Escolha entre 3 opções:</label>
+                <select name="planos" id="planos">
+                <option value="basico">Basico(HP)</option>
+                <option value="festao">Festão</option>
+                <option value="megaEvento">Mega evento</option>
                 </select>
                 </div>
         </div>
     </div>
-    <button type="button" id="buttonCriar">Confirmar reserva</button>     
+    <button type="button">Confirmar reserva</button>     
 </div> 
-
-<script type="text/javascript">
-
-	let nome = document.getElementById("nome");
-	let telefone = document.getElementById("telefone");
-    let endereco = document.getElementById("endereco");
-    let complemento = document.getElementById("complemento");
-    let garrafas = document.getElementById("garrafas");
-    let data = document.getElementById("data");
-    let plano = document.getElementById("plano");
-	let buttonCriar = document.getElementById("buttonCriar");
-
-	async function ConfirmarReserva() {
-		if (!nome.value) {
-			alert("O nome é obrigatório");
-			return;
-		}
-
-		if (!telefone.value) {
-			alert("O telefone é obrigatório");
-			return;
-		}
-        if (!endereco.value) {
-			alert("O endereco é obrigatório");
-			return;
-		}
-        if (!complemento.value) {
-			alert("O complemento é obrigatório");
-			return;
-		}
-        if (!garrafas.value) {
-			alert("O garrafas é obrigatório");
-			return;
-		}
-        if (!data.value) {
-			alert("O data é obrigatório");
-			return;
-		}
-        if (!plano.value) {
-			alert("O plano é obrigatório");
-			return;
-		}
-
-		// Cria um objeto com os valores que serão enviados para o servidor.
-		let dadosParaEnvio = {
-			nome: nome.value,
-			telefone: telefone.value,
-            endereco: endereco.value,
-            complemento: complemento.value,
-            garrafas: garrafas.value,
-            data: data.value,
-            plano: plano.value, 
-		};
-
-		let opcoes = {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json"
-		    },
-		    body: JSON.stringify(dadosParaEnvio)
-		};
-
-		try {
-			let response = await fetch("/ConfirmarReserva", opcoes);
-
-			if (response.ok) {
-				// Limpa os campos para facilitar a criação da próxima pessoa.
-				nome.value = "";
-				telefone.value = "";
-                endereco.value = "";
-                complemento.value = "";
-                garrafas.value = "";
-                data.value = "";
-                plano.value = "";
-
-				alert("Reserva criada com sucesso!");
-			} else {
-				alert("Erro ao criar a Reserva!");
-			}
-		} catch (ex) {
-			alert("Erro de rede: " + ex.message);
-		}
-	}
-
-	buttonCriar.onclick = ConfirmarReserva;
-
-</script>
 
 <div class="background-contacts">
     <div class="container">

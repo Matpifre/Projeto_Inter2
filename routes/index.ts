@@ -16,8 +16,12 @@ class IndexRoute {
 		res.render("index/servicos");
 	}
 
-	public async login(req: app.Request, res: app.Response) {
+	public async pedido(req: app.Request, res: app.Response) {
 		res.render("index/login");
+	}
+
+	public async cadastro(req: app.Request, res: app.Response) {
+		res.render("index/cadastro");
 	}
 
 	public async funcionarios(req: app.Request, res: app.Response) {
@@ -56,6 +60,69 @@ class IndexRoute {
 
 		res.render("index/funcionarios", opcoes);
 	}
+	@app.http.post()
+	public async ConfirmarReserva(req: app.Request, res: app.Response) {
+		// Os dados enviados via POST ficam dentro de req.body
+		let limpeza = req.body;
+
+		// É sempre muito importante validar os dados do lado do servidor,
+		// mesmo que eles tenham sido validados do lado do cliente!!!
+		if (!limpeza) {
+			res.status(400);
+			res.json("Dados inválidos");
+			return;
+		}
+
+		if (!limpeza.nome) {
+			res.status(400);
+			res.json("Nome inválido");
+			return;
+		}
+
+		if (!limpeza.telefone) {
+			res.status(400);
+			res.json("telefone inválido");
+			return;
+		}
+		if (!limpeza.endereco) {
+			res.status(400);
+			res.json("endereco inválido");
+			return;
+		}
+		if (!limpeza.complemento) {
+			res.status(400);
+			res.json("complemento inválido");
+			return;
+		}
+		if (!limpeza.garrafas) {
+			res.status(400);
+			res.json("garrafas inválido");
+			return;
+		}
+		if (!limpeza.data) {
+			res.status(400);
+			res.json("data inválido");
+			return;
+		}
+		if (!limpeza.plano) {
+			res.status(400);
+			res.json("plano inválido");
+			return;
+		}
+
+		await app.sql.connect(async (sql) => {
+
+			// Todas os comandos SQL devem ser executados aqui dentro do app.sql.connect().
+
+			// As interrogações serão substituídas pelos valores passados ao final, na ordem passada.
+			await sql.query("INSERT INTO limpeza (nome, telefone,endereco,complemento,garrafas,data,plano) VALUES (?, ?, ?, ?, ?, ?, ?)", 
+							[limpeza.nome, limpeza.telefone,limpeza.endereco,limpeza.complemento,limpeza.garrafas,limpeza.data,limpeza.plano,]);
+
+		});
+
+		res.json(true);
+	}
 }
+
 
 export = IndexRoute;

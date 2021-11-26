@@ -4,19 +4,20 @@
 
 .logo {
     max-width: 100%;
-    background-image: url("../public/Img/ressaclean.jpg");
+    background-image: url("/public/Img/ressaclean.jpg");
     background-size: cover;
     background-position: center center;
 }
 
 
- .login {
-    margin-left: 750px;
+ .pedido {
+    margin-left: 0%;
 } 
 
 .img-servico {
+    position: relative;
     max-width: 100%;
-    background-image: url("../public/Img/Servicos_linpeza.jpg");
+    background-image: url("/public/Img/Servicos_linpeza.jpg");
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -79,8 +80,9 @@
 }
 
 .img-funcionarios {
+    position: relative;
     max-width: 100%;
-    background-image: url("../public/Img/equipe-de-limpeza.jpg");
+    background-image: url("/public/Img/equipe-de-limpeza.jpg");
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -295,8 +297,9 @@
     background-color: #EBEBEB;
 }
 .img-pedido{
+    position: relative;
     max-width: 100%;
-    background-image: url("../public/Img/ressaca.jpg");
+    background-image: url("/public/Img/ressaca.jpg");
     background-size: cover;
     background-position: center;
     text-align: center;

@@ -12,6 +12,6 @@ CREATE TABLE pedido (
   complemento varchar(50) NOT NULL,
   garrafas int NOT NULL,
   data datetime NOT NULL,
-  plano int NOT NULL,
+  plano varchar(50) NOT NULL,
   PRIMARY KEY (id)
 );

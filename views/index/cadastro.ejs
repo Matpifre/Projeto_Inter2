@@ -6,86 +6,60 @@
 <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet" />
 
 <div class="fundo-pedido">
-<div class="img-pedido">
+<div class="img-listagem">
     <h1 class="titulo-sv">
-        Faça já sua reserva de nossa limpeza!
+        Veja aqui nossos serviços marcados
     </h1>
 
     <h3 class="subtitulo-sv">
-        Escolha entre nossas diversas Opções
+        Fique de olho no seu pedido!
     </h3>
     <img src="/public/Img/divisao1.svg" style="width: 100%; height: 120px; position: absolute; left: 0; bottom: 0;" />
 </div>
 
 <h1 class="introfunc">
-    Faça agora sua reserva ou pedido
+    Nossas reservas
     <p><img src="/public/Img/iconeLinha.png" style="width: 40px; height: 40px" /></p>
 </h1>
 
+<% for (let i = 0; i < limpezas.length; i++) { %>
+<div>
 
-<div class="caixinhas-pedido">
-    <div class="container-sv">
-        <div class="row servico">
-                <div class="col-sm-3">
-                <h3 class="titulos-caixinhas">Nome completo</h3>
-                <label for="Nome">Nome:</label>
-                <input type="text" id="Nome" name="Nome">
-                </div>
+	<h2>
+		<%= limpezas[i].nome %>
+	</h2>
 
-                <div class="col-sm-3">
-                <h3 class="titulos-caixinhas">Telefone de contato</h3>
-                <label for="Telefone">Telefone:</label>
-                <input type="tel" id="Telefone" name="Telefone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">>
-                </div>
+	<p>
+		Telefone: <%= limpezas[i].telefone %>
+	</p>
 
-                <div class="col-sm-3">
-                <h3 class="titulos-caixinhas">Endereço da Limpeza</h3>
-                <label for="endereco">Endereço:</label>
-                <input type="text" id="endereco" name="endereco">
-                </div>
-                <div class="col-sm-3">
-                <h3 class="titulos-caixinhas">Complemento </h3>
-                <label for="complemento">Ex(AP)</label>
-                <input type="text" id="complemento" name="complemento">
-                </div>
-        </div>            
-    </div>      
+	<p>
+		Endereço: <%= limpezas[i].endereco %>
+	</p>
+
+    <p>
+		Complemento: <%= limpezas[i].complemento %>
+	</p>
     
-    <div class="container-sv">
-        <div class="row servico">
-                
-                <div class="col-sm-3">
-                <h3 class="titulos-caixinhas">Garafas retornaveis</h3>
-                <label for="garafas">N°de garafas:</label>
-                <input type="number" id="garafas" name="garafas">
-                </div>
-                
-                <div class="col-sm-3">
-                <h3 class="titulos-caixinhas"> Escolha a data</h3>
-                <label for="DataLImp">Data da limpeza:</label>
-                <input type="date" id="DataLImp" name="DataLImp">
-                </div>   
-                
-                <div class="col-sm-3">
-                <h3 class="titulos-caixinhas"> Escolha o horário</h3>
-                <label for="appt">Horário linpeza:</label>
-                <input type="time" id="appt" name="appt"
-                min="09:00" max="18:00" required>
-                </div>
+    <p>
+		Nm de Garrafas: <%= limpezas[i].garrafas %>
+	</p>
 
-                <div class="col-sm-3">
-                <h3 class="titulos-caixinhas">Escolha de plano</h3>
-                <label for="planos">Escolha entre 3 opções:</label>
-                <select name="planos" id="planos">
-                <option value="basico">Basico(HP)</option>
-                <option value="festao">Festão</option>
-                <option value="megaEvento">Mega evento</option>
-                </select>
-                </div>
-        </div>
-    </div>
-    <button type="button">Confirmar reserva</button>     
-</div> 
+    <p>
+		Data: <%= limpezas[i].data %>
+	</p>
+
+    <p>
+	    Plano: <%= limpezas[i].plano %>
+	</p>
+
+	<hr />
+
+</div>
+<% } %>
+
+
+
 
 <div class="background-contacts">
     <div class="container">

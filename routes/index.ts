@@ -1,4 +1,5 @@
 ﻿import app = require("teem");
+import DataUtil = require("../utils/dataUtil");
 
 class IndexRoute {
 	public async index(req: app.Request, res: app.Response) {
@@ -18,6 +19,22 @@ class IndexRoute {
 
 	public async pedido(req: app.Request, res: app.Response) {
 		res.render("index/login");
+	}
+
+	public async listagem(req: app.Request, res: app.Response) {
+		let limpezas: any[];
+
+		await app.sql.connect(async (sql) => {
+
+			limpezas = await sql.query("SELECT nome, telefone,endereco,complemento,garrafas,date_format(data, '%d/%m/%Y %H:%i') data,plano FROM pedido ORDER BY data");
+
+		});
+
+		let opcoes = {
+			limpezas: limpezas
+		};
+
+		res.render("index/cadastro", opcoes);
 	}
 
 	public async cadastro(req: app.Request, res: app.Response) {
@@ -60,6 +77,8 @@ class IndexRoute {
 
 		res.render("index/funcionarios", opcoes);
 	}
+
+
 	@app.http.post()
 	public async ConfirmarReserva(req: app.Request, res: app.Response) {
 		// Os dados enviados via POST ficam dentro de req.body
@@ -104,9 +123,21 @@ class IndexRoute {
 			res.json("data inválido");
 			return;
 		}
+		if (!limpeza.hora) {
+			res.status(400);
+			res.json("horário inválido");
+			return;
+		}
 		if (!limpeza.plano) {
 			res.status(400);
 			res.json("plano inválido");
+			return;
+		}
+
+		limpeza.data = DataUtil.converterDataISO(limpeza.data + " " + limpeza.hora);
+		if (!limpeza.data) {
+			res.status(400);
+			res.json("data/horário inválido");
 			return;
 		}
 
@@ -115,7 +146,7 @@ class IndexRoute {
 			// Todas os comandos SQL devem ser executados aqui dentro do app.sql.connect().
 
 			// As interrogações serão substituídas pelos valores passados ao final, na ordem passada.
-			await sql.query("INSERT INTO limpeza (nome, telefone,endereco,complemento,garrafas,data,plano) VALUES (?, ?, ?, ?, ?, ?, ?)", 
+			await sql.query("INSERT INTO pedido (nome, telefone,endereco,complemento,garrafas,data,plano) VALUES (?, ?, ?, ?, ?, ?, ?)", 
 							[limpeza.nome, limpeza.telefone,limpeza.endereco,limpeza.complemento,limpeza.garrafas,limpeza.data,limpeza.plano,]);
 
 		});

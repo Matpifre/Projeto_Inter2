@@ -37,10 +37,6 @@ class IndexRoute {
 		res.render("index/cadastro", opcoes);
 	}
 
-	public async cadastro(req: app.Request, res: app.Response) {
-		res.render("index/cadastro");
-	}
-
 	public async funcionarios(req: app.Request, res: app.Response) {
 
 		let fucionarios = {

@@ -335,3 +335,8 @@
 .titulo-desc{
     color:#1ce2f8; 
 }
+.listagem-pessoas{
+    text-align: center;
+    background-image:linear-gradient(  #EBEBEB,#faf07f,#EBEBEB);
+    padding-top: 2%;
+}
